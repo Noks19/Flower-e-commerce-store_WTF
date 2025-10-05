@@ -1,0 +1,267 @@
+/* --- Variables and Global Reset --- */
+:root {
+  --primary-purple: #5d19a2;
+  --light-purple: #e9e0f6;
+  --text-dark: #212121;
+  --text-light: #666;
+  --star-yellow: #ffc107;
+  --card-bg: #f6f6f6;
+  --card-border-radius: 14px;
+  --discount-color: #fe94e6;
+  --timer-text: #d36be7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: var(--text-dark);
+  padding: 40px 0;
+}
+
+/* --- Section Layout --- */
+.product-section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Title Styling */
+.section-subtitle {
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.section-title-main {
+  color: var(--text-dark);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.section-title {
+  color: var(--primary-purple);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* "View All Products" Button */
+.view-all-button {
+  background-color: var(--primary-purple);
+  color: #efc5f8;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: var(--primary-purple);
+}
+
+/* Product Cards Wrapper  */
+.product-cards-wrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+}
+.product-cards-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 350px;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card-top-container {
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  background-color: var(--card-bg);
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 80%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--discount-color);
+  color: var(--primary-purple);
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.icon-group {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.top-seller .image-container:hover .icon-group {
+  opacity: 1;
+}
+
+.icon-group i {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--text-light);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--primary-purple);
+  padding: 20px 0;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 8px;
+}
+
+.countdown-timer .timer-item span.timer {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--timer-text);
+}
+
+.countdown-timer .timer-item h4 {
+  color: var(--light-purple)
+}
+
+/*  Product Details */
+.product-details {
+  padding: 10px 15px 0 15px;
+}
+.product-details-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-category {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating i.fas.fa-star {
+  color: var(--star-yellow);
+  font-size: 0.9rem;
+}
+
+.rating h4 {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5px;
+}
+
+.current-price {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.old-price {
+  color: var(--text-light);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+
+.partial-view {
+  opacity: 0.8;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 1024px) {
+  .product-cards-wrapper {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+  .product-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+  .view-all-button {
+    position: static;
+    margin-top: 15px;
+  }
+}
