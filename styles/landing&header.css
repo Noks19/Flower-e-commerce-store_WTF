@@ -138,11 +138,11 @@ nav ul li a {
   justify-content: space-between;
   padding: 50px;
   background-color: #f3f2f2; /* Light gray background */
-  background-image: url("Foreground.png");
+  background-image: url("/assets/Foreground.png");
     background-size: 50% auto;
     background-repeat: no-repeat;
     background-position:right;
-    max-height: fit-content;
+    height: 60vh;
     margin-top: 3;
     
 }
@@ -185,6 +185,13 @@ nav ul li a {
   border-radius: 5px;
 }
 
+.shopping-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
 
 .top-left {
   position:absolute;
@@ -211,13 +218,31 @@ nav ul li a {
     font-weight: lighter;
 }
 
-.bottomright {
-  position: absolute;
-  top: 70%;
-  padding: 10px 15px;
-  
+.hero-images {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+.bottomright {
+  position: absolute;
+  background-color: #f8f8f8;
+  border-radius: 50px;
+  display:flex;
+  align-items: center;
+  left: 26px;
+  top: 60%;
+}
+
+.hero-images .bottomright {
+  position: absolute;
+  background-color: #f8f8f8;
+  border-radius: 50px;
+  display:flex;
+  align-items: center;
+  left: 26px;
+  top: 60%;
+}
 .ratings {
     display: inline-block;
     font-size: 18px;
@@ -226,8 +251,6 @@ nav ul li a {
     margin-left: 15px;
     margin-top: 0px;
     position: relative;
-    bottom: 30px;
-    left: 5px;
 }
 
 .customers {
@@ -240,7 +263,6 @@ nav ul li a {
   border-style: solid;
   background-color: black;
   position: relative;
-  right: 15px;
 }
 .customers-text {
     display: flex;
@@ -254,30 +276,24 @@ nav ul li a {
 }
 
 .shop-button {
-    display: inline-block;
     padding: 14px 34px 14px 34px;
     background-color: #5e00a6;
     color: white;
-
     text-decoration: none;
     border-radius: 50px;
-    margin-top: 45px;
-    margin-bottom: 185px;
 }
 
-.view-products {
-    display: inline-block;
+.shopping-button .view-products {
+  
     color: rgb(54, 52, 52);
     text-decoration: none;
-    margin-top: 45px;
-    margin-bottom: 15px;
-    position: absolute;
-    left: 13%;
-    top: 56%;
     text-decoration: underline;
     font-weight: bold;
 }
 
+.shopping-button .view-products a {
+   color: red; 
+}
 .fast img {
     width: 20px;
     height: 20px;
