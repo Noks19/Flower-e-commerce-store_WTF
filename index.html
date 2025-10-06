@@ -425,8 +425,124 @@
         </div>
       </div>
     </div>
+ <!--Deals of the Day-->
 
+    <section class="deals">
+      <h2>🌼 Deals of the Day</h2>
 
+      <div class="slides">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1548094967-e25a127d1f6d?q=80&w=623&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Roses"
+          />
+          <p>Bouquets</p>
+          <h3>Rose Bouquet</h3>
+          <div class="price">$35.00 <span class="old-price">$70.00</span></div>
+          <div class="rating">⭐ 4.8</div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1601884928885-92a922f7962f?q=80&w=363&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Sunflowers"
+          />
+          <p>Bouquet</p>
+          <h3>Sunflower Bouquet</h3>
+          <div class="price">$35.50 <span class="old-price">$55.00</span></div>
+          <div class="rating">⭐ 4.9</div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1676400614009-3b230ef8be6d?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Tulips"
+          />
+          <p>Basket</p>
+          <h3>Tulips Bouquet</h3>
+          <div class="price">75.00 <span class="old-price">$95.00</span></div>
+          <div class="rating">⭐ 5.0</div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1675952370279-1a76f3d3f4f9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Orchid"
+          />
+          <p>Bouquet</p>
+          <h3>Orchad Bouquet</h3>
+          <div class="price">65.00 <span class="old-price">$85.00</span></div>
+          <div class="rating">⭐ 4.7</div>
+        </div>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1505894023506-c21c7e0cc25c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Daisys"
+          />
+          <p>Basket</p>
+          <h3>Daisy Bouquet</h3>
+          <div class="price">50.00 <span class="old-price">$73.00</span></div>
+          <div class="rating">⭐ 4.5</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>💬 What Our Clients Say</h2>
+
+      <div class="testimonial-slider">
+        <div class="testimonial">
+          <img
+            src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="client"
+          />
+          <p>
+            "The flowers wer fresh and beautiful arranged. Delivery was super
+            quick!"
+          </p>
+          <span>⭐⭐⭐⭐⭐</span>
+          <h4>-Jacob</h4>
+        </div>
+
+        <div class="testimonial">
+          <img
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="client"
+          />
+          <p>"Great service and wonderful quality. I loved the sunflowers!"</p>
+          <span>⭐⭐⭐⭐</span>
+          <h4>-Emily</h4>
+        </div>
+
+        <div class="testimonial">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1673957923985-b814a9dbc03d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="client"
+          />
+          <p>"Affordable prices and beautiful packaging. Highly recommend."</p>
+          <span>⭐⭐⭐⭐⭐</span>
+          <h4>-Sarah</h4>
+        </div>
+      </div>
+
+      <button class="arrow left" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="arrow right" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+
+    <script>
+      let slideIndex = 0;
+      const slides = document.querySelectorAll(".testimonial");
+      const slider = document.querySelector(".testimonial-slider");
+
+      function moveSlide(direction) {
+        slideIndex += direction;
+
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+        if (slideIndex >= slides.length) slideIndex = 0;
+
+        slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+      }
+    </script>
     <section class="news-blogs-section container">
         <header class="section-header">
             <h2>News & Blogs</h2>
