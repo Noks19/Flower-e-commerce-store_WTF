@@ -196,9 +196,6 @@ body {
   font-size: 0.9rem;
 }
 
-.partial-view {
-  opacity: 0.8;
-}
 
 /* Media Query for Responsiveness */
 @media (max-width: 1024px) {
