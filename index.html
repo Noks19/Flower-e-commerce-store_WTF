@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flower Shop</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/styles/products.css" />
+    <link rel="stylesheet" href="/styles/arrivals.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -18,7 +20,7 @@
   </head>
   <body>
     <!-- Our Products -->
-    <div class="product-section-container">
+    <section class="product-section-container">
       <div>
         <h1 class="section-subtitle">Our Products</h1>
       </div>
@@ -157,7 +159,145 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <!-- New Arrival -->
+
+    <section class="product-section-container">
+      <section class="new-arrival-section">
+        <header class="arrivals-section-header">
+          <p class="section-subtitle">New Arrival</p>
+          <h2 class="section-title">New Arrival <span>Products</span></h2>
+        </header>
+
+        <div class="product-cards-grid">
+          <div class="arrivals-product-card">
+            <div class="card-inner-flex">
+              <div class="image-wrapper">
+                <img src="/assets/shopping.png" alt="Fresh Flower Basket" />
+                <span class="discount-badge">30% off</span>
+                <div class="arrivals-icon-group">
+                  <i class="far fa-heart"></i>
+                  <i class="fa-solid fa-expand-arrows-alt"></i>
+                  <i class="fa-solid fa-shopping-bag"></i>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="info-header">
+                  <span class="category">Basket</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>5.0</span>
+                  </div>
+                </div>
+                <h3 class="arrivals-product-name">Fresh Flower Basket</h3>
+                <p class="arrivals-product-price">
+                  <span class="arrivals-current-price">$42.00</span>
+                  <span class="arrivals-old-price">$60.00</span>
+                </p>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+                <a href="#" class="shop-now-link">
+                  Shop Now <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="arrivals-product-card">
+            <div class="card-inner-flex">
+              <div class="image-wrapper">
+                <img src="/assets/lavender-removebg-preview (2).png" alt="Red White Rose" />
+                <span class="discount-badge">50% off</span>
+                <div class="arrivals-icon-group">
+                  <i class="far fa-heart"></i>
+                  <i class="fa-solid fa-expand-arrows-alt"></i>
+                  <i class="fa-solid fa-shopping-bag"></i>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="info-header">
+                  <span class="category">Flowers</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>5.0</span>
+                  </div>
+                </div>
+                <h3 class="arrivals-product-name">Red White Rose</h3>
+                <p class="product-price">
+                  <span class="arrivals-current-price">$30.00</span>
+                  <span class="arrivals-old-price">$60.00</span>
+                </p>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+                <a href="#" class="shop-now-link">
+                  Shop Now <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+           <div class="arrivals-product-card">
+            <div class="card-inner-flex">
+              <div class="image-wrapper">
+                <img src="/assets/royal.png" alt="Fresh Flower Basket" />
+                <span class="discount-badge">30% off</span>
+                <div class="arrivals-icon-group">
+                  <i class="far fa-heart"></i>
+                  <i class="fa-solid fa-expand-arrows-alt"></i>
+                  <i class="fa-solid fa-shopping-bag"></i>
+                </div>
+              </div>
+              <div class="product-info">
+                <div class="info-header">
+                  <span class="category">Basket</span>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>5.0</span>
+                  </div>
+                </div>
+                <h3 class="arrivals-product-name">Fresh Flower Basket</h3>
+                <p class="arrivals-product-price">
+                  <span class="arrivals-current-price">$42.00</span>
+                  <span class="arrivals-old-price">$60.00</span>
+                </p>
+                <p class="description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+                <a href="#" class="shop-now-link">
+                  Shop Now <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="weekly-deals-section">
+        <div class="banner-content">
+          <div class="text-content">
+            <p class="deal-subtitle">Weekly Deals</p>
+            <h2 class="deal-title">
+              <span>Unbeatable Weekly Offers on </span> Beautiful Flowers
+            </h2>
+            <p class="deal-description">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem.
+            </p>
+            <button class="shop-now-button">
+              Shop Now <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+          <div class="image-content">
+            <img
+              src="/assets/lady-flowe-removebg-preview.png"
+              alt="Woman Standing and holding a bouquet of flowers"
+            />
+          </div>
+        </div>
+      </section>
+    </section>
+
     <script src="index.js"></script>
   </body>
 </html>
