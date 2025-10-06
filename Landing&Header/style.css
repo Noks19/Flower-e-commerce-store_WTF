@@ -369,6 +369,8 @@ nav ul li a {
   .nav-icons img {
     width: 20px; /* Adjust icon size */
     height: 20px;
+    position: relative;
+    display: inline;
   }
 
   .flwr img {
@@ -380,13 +382,24 @@ nav ul li a {
 @media (max-width: 768px) {
   .hero {
     flex-direction: column; /* Stack elements vertically */
-    text-align: center; /* Center text */
+    text-align: start; /* Center text */
     padding: 20px; /* Reduce padding */
+    background-size: contain; /* Adjust background size */
+    background-position: right;
+    position: relative; /* Change to relative for stacking */
+    left: auto; /* Reset left position */
+    top: auto; /* Reset top position */
   }
 
   .hero-content {
     width: 100%; /* Full width */
-    align-items: center; /* Center content */
+    align-items: centre; /* Center content */
+    top: auto; /* Reset position */
+    margin-bottom: 20px; /* Add margin for spacing */
+    padding: 0 10px; /* Add horizontal padding */
+    position: relative;
+    left: auto; /* Reset left position */
+    top: auto; /* Reset top position */
   }
 
   .hero h1 {
@@ -407,7 +420,7 @@ nav ul li a {
   }
 
   .navbar ul {
-    flex-direction: column; /* Stack nav links vertically */
+    flex-direction: row; /* Stack nav links horizontally */
     gap: 10px; /* Space between links */
   }
 
@@ -418,10 +431,41 @@ nav ul li a {
 
   .nav-icons {
     margin-top: 10px; /* Add margin for spacing */
+  
+  }
+
+  .bottomright {
+    left: 0; /* Center the ratings */
+    top: 64%; /* Adjust top position */
+   
+   
+    
+  }
+
+  .view-products {
+    left: 22%; /* Adjust the link */
+    top: 40%;
+  }
+
+  .fast {
+    left: 40%; /* Adjust position */
+    bottom: 35%;
+  }
+
+  .safe {
+    left: 70%; /* Adjust position */
+    bottom: 5%;
+    position: relative;
   }
 }
 
 @media (max-width: 480px) {
+  .hero {
+    padding: 15px; /* Further reduce padding */
+    background-size: contain; /* Adjust background size */
+    background-position: right;
+    text-align: start; /* Align text to the left */
+  }
   .hero h1 {
     font-size: 1.5em; /* Further adjust font size */
   }
@@ -436,6 +480,10 @@ nav ul li a {
 
   .flwr {
     font-size: 1.5em; /* Adjust font size for logo */
+  }
+  .nav ul li a {
+    padding: 8px 10px; /* Adjust nav link padding */
+    font-size: 1em; /* Adjust nav link font size */
   }
 }
 
