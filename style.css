@@ -10,8 +10,8 @@ body {
 h2 {
   text-align: center;
   margin: 20px 0;
+  color: #5b049f;
 }
-
 
 .deals {
   padding: 40px 20px;
@@ -47,7 +47,6 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
 }
-
 
 .card::before {
   content: "20% Off";
@@ -89,30 +88,27 @@ h2 {
   padding: 40px 20px;
   background: #f9f9f9;
   text-align: center;
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .testimonials h2 {
   margin-bottom: 30px;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
-.testimonials-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+.testimonial-slider {
+  display: flex;
+  transition: transform 0.5 ease-in-out;
 }
 
 .testimonial {
-  background: #f9f0f5;
+  min-width: 100%;
+  box-sizing: border-box;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .testimonial img {
@@ -123,14 +119,47 @@ h2 {
   margin-bottom: 15px;
 }
 
+.testimonial p {
+  font-style: italic;
+  margin: 10px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
 .testimonial span {
   color: #ffb400;
   font-size: 1rem;
   margin: 5px 0;
+  display: block;
 }
 
 .testimonial h4 {
   margin-top: 8px;
   font-weight: bold;
   color: #333;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: #eee;
 }
