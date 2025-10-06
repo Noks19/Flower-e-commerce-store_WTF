@@ -1,42 +1,52 @@
-/* --- Variables and Global Reset --- */
-:root {
-  --primary-purple: #5d19a2;
-  --light-purple: #e9e0f6;
-  --text-dark: #212121;
-  --text-light: #666;
-  --star-yellow: #ffc107;
-  --card-bg: #f6f6f6;
-  --card-border-radius: 14px;
-  --discount-color: #fe94e6;
-  --timer-text: #d36be7;
-  --secondary-purple: #5E1AA6;
-  --shop-now-button: #FF92E9
+.product-section-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
-  color: var(--text-dark);
-  padding: 40px 0;
-}
-
-.product-cards-grid,
-.product-cards-wrapper {
+.product-section-header {
   display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  padding-bottom: 20px;
-  scrollbar-width: none;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative;
 }
-.product-cards-grid::-webkit-scrollbar,
-.product-cards-wrapper::-webkit-scrollbar {
-  display: none;
+
+/* Title Styling */
+.section-subtitle {
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.section-title-main {
+  color: var(--text-dark);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.section-title {
+  color: var(--primary-purple);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* "View All Products" Button */
+.view-all-button {
+  background-color: var(--primary-purple);
+  color: #efc5f8;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.view-all-button:hover {
+  background-color: var(--primary-purple);
 }
 
 .product-card {
@@ -101,7 +111,7 @@ body {
   opacity: 1;
 }
 
-.icon-group i {
+.icon-group i,  .arrivals-icon-group i{
   background-color: rgba(255, 255, 255, 0.9);
   color: var(--text-light);
   width: 30px;
@@ -136,7 +146,7 @@ body {
 }
 
 .countdown-timer .timer-item h4 {
-  color: var(--light-purple)
+  color: var(--light-purple);
 }
 
 /*  Product Details */
@@ -196,20 +206,6 @@ body {
   font-size: 0.9rem;
 }
 
-
-/* Media Query for Responsiveness */
-@media (max-width: 1024px) {
-  .product-cards-wrapper {
-    justify-content: flex-start;
-    padding: 0 20px;
-  }
-  .product-section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 20px;
-  }
-  .view-all-button {
-    position: static;
-    margin-top: 15px;
-  }
+.partial-view {
+  opacity: 0.8;
 }
